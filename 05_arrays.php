@@ -138,3 +138,16 @@ ksort($person); // ksort, krsort, asort, arsort
 echo '<pre>';
 var_dump($person);
 echo '</pre>';
+
+echo '<hr>';
+// Two dimensional arrays
+
+$todo = [
+    ['title' => 'Todo title 1', 'complited' => true],
+    ['title' => 'Todo title 2', 'complited' => false],
+    ['title' => 'Todo title 3', 'complited' => true]
+];
+
+echo '<pre>';
+var_dump($todo);
+echo '</pre>';
