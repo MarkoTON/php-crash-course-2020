@@ -86,33 +86,52 @@ $person = [
     'age' => 30,
     'hobbies' => ['Tennis', 'Video Games'],
 ];
+
+echo '<hr>';
+
+echo '<pre>';
+var_dump($person);
+echo '</pre>';
+
+echo '<pre>';
+print_r($person);
+echo '</pre>';
+
+echo '<hr>';
+
 // Get element by key
 echo $person['name'].'<br>';
+echo '<hr>';
 
 // Set element by key
 $person['channel'] = 'TraversyMedia';
+echo '<hr>';
 
 //Null coalescing assignment operator. Since PHP 7.4
 if (!isset($person['address'])){
     $person['address'] = 'Unknown';
 }
-$person['address'] ??= 'Unknown';
+$person['address'] ??= 'Unknown'; // Kraca verzija
 echo $person['address'].'<br>';
+echo '<hr>';
 
 // Check if array has specific key
 echo '<pre>';
 var_dump(isset($person['age']));  // Change age into "location"
 echo '</pre>';
+echo '<hr>';
 
 // Print the keys of the array
 echo '<pre>';
 var_dump(array_keys($person));
 echo '</pre>';
+echo '<hr>';
 
 // Print the values of the array
 echo '<pre>';
 var_dump(array_values($person));
 echo '</pre>';
+echo '<hr>';
 
 // Sorting associative arrays by values, by keys
 ksort($person); // ksort, krsort, asort, arsort
