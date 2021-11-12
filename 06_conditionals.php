@@ -22,17 +22,17 @@ if ($age > 20) {
 // Difference between == and ===
 $age == 20; // true
 $age == '20'; // true
-
+// Ovde se izgleda ista stvar desava da se vrednost konvertuje. 
 $age === 20; // true
 $age === '20'; // false
 
 // if AND
 if ($age > 20 && $salary === 300000) {
-
+    echo "1".'<br>';
 }
-// if OR
+// if OR ili ||
 if ($age > 20 OR $salary === 300000) {
-
+    echo "2".'<br>';
 }
 
 // Ternary if
@@ -48,7 +48,7 @@ $var = $name ?? 'John'; // Equivalent of above
 echo $var.'<br>';
 
 // switch
-$userRole = 'admin'; // admin, editor, user
+$userRole = ''; // admin, editor, user
 
 switch ($userRole) {
     case 'admin':
