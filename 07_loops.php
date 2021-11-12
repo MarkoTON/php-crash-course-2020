@@ -1,16 +1,18 @@
 <?php
 
 // while
-while (true) { // Infinite loop: DON'T run this
-    // Do something constantly
-}
+// while (true) { // Infinite loop: DON'T run this
+//     // Do something constantly
+//     echo "Infinite loop";
+//     return;
+// };
 
 // Loop with $counter
 $counter = 0; // When counter is 10??
 while ($counter < 10) {
     echo $counter.'<br>';
-    // if ($counter > 5) break;
     $counter++;
+    if ($counter == 10) echo '<hr>';
 }
 
 // do - while
