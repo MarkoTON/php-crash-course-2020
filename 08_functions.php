@@ -19,26 +19,29 @@ hello();
 // Create sum of two functions
 function sum($a, $b)
 {
-    return $a + $b;
+    return $a + $b . '<br>';
 }
 
 echo sum(4,5);
 echo sum(9,10);
 
 // Create function to sum all numbers using ...$nums
-//function sum(...$nums)
-//{
-//    $sum = 0;
-//    foreach ($nums as $num) $sum += $num;
-//    return $sum;
-//}
-//echo sum(1, 2, 3, 4, 6);
+// Ovde pretvara sve vrednosti u array i onda loop da ih sabere. 
+function sum_loop(...$nums)
+{
+   $sum = 0;
+   foreach ($nums as $num) $sum += $num;
+   return $sum;
+}
+echo sum_loop(1, 2, 3, 4, 6);
+
+echo '<br>';
 //
 // Arrow functions
-//function sum(...$nums)
-//{
-//    return array_reduce($nums, fn($carry, $n) => carry + $n);
-//}
-//echo sum(1, 2, 3, 4, 6);
+function sum_reduce(...$nums)
+{
+   return array_reduce($nums, fn($carry, $n) => $carry + $n);
+};
+echo sum_reduce(1, 2, 3, 4, 6);
 
 
