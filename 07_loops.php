@@ -29,6 +29,11 @@ for ($i = 0; $i < 10; $i++) {
 
 // foreach
 $fruits = ["Banana", "Apple", "Orange"];
+
+foreach ($fruits as $fruit){
+    echo 'simple one - '. $fruit . '<br>';
+}
+
 foreach ($fruits as $i => $fruit) {
     echo $i . ' ' . $fruit . '<br>';
 }
@@ -40,6 +45,18 @@ $person = [
     'age' => 30,
     'hobbies' => ['Tennis', 'Video Games'],
 ];
+
+// Stampanje array-a
+foreach ($person as $key => $value) {
+    if (is_array($value)) {
+        echo $key .' '. implode(',',$value).'<br>';
+    } else {
+        echo  $key . ' ' . $value . '<br>';
+    }
+}
+
+echo '<hr>';
+
 foreach ($person as $key => $value) {
     if ($key === 'hobbies') {
         break;
