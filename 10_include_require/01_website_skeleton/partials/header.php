@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-<header>
+<header style="background-color: #e3e3e3;">
     <a href="index.php">Home</a>
     <a href="about.php">About</a>
 </header>
